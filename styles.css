@@ -1,0 +1,60 @@
+body{
+    height: 100%;
+    margin: 0;
+    font-family: Roboto;
+    display: grid;
+    place-items: center;
+    grid-template-rows: auto 1fr auto;
+    color: aliceblue;
+    background: #E47369;
+    background: linear-gradient(to right,rgba(228, 115, 105, 1) 0%, rgb(204, 83, 72) 98%);
+}
+
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer{
+    padding: 2rem;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 30%;
+}
+
+#center{
+    background-color: #e9e9e93d;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 1.5rem;
+    justify-items: center;
+    align-content: center;
+    border-radius:2%;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+}
+
+#options{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+}
+
+#time p{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+#message p{
+    font-size: 1.5rem;
+    color: #72312b;
+    font-weight: 500;
+}
