@@ -40,6 +40,16 @@ function startorpause(){
     }
 }
 
+const optionButtons = document.querySelectorAll('.option-btn')
+
+optionButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        optionButtons.forEach(btn => btn.classList.remove('selected'));
+        button.classList.add('selected')
+    });
+});
+
+
 comecarcontar.addEventListener("click", startorpause)
 
 

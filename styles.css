@@ -41,6 +41,29 @@ footer{
     padding: 2rem;
 }
 
+.option-btn{
+    background-color:transparent;
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+    border-radius: 20px;
+    font-weight:bold;
+	font-size:1rem;
+	padding:16px;
+    width: auto;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+
+.option-btn:hover{
+    background-color: #ffffff2c;  
+}
+
+.selected{
+    background-color: #ffffff77;
+}
+
 #options{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -49,7 +72,7 @@ footer{
 }
 
 #time p{
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: bold;
 }
 
@@ -57,4 +80,46 @@ footer{
     font-size: 1.5rem;
     color: #72312b;
     font-weight: 500;
+}
+
+#comecarcontar{
+    background-color:#FFF;
+	border-radius:28px;
+    width: 200px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#d83526;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#inputtasks input {
+    width: 400px;
+    height: 50px;
+    padding: 10px 50px;
+    color: #000000d7;
+    margin-top: 10px;
+    border: 2px dashed #7a7a7a;
+    border-radius: 15px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s;
+    background-color: #fcfcfc5e;
+}
+
+#inputtasks input:focus {
+    background-color: rgba(255, 255, 255, 0.7); /* Menos transparente ao focar */
+    border-color: #5e5e5e;
 }
