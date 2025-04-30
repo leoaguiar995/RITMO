@@ -1,4 +1,4 @@
-body{
+body.pomodoro{
     height: 100%;
     margin: 0;
     font-family: Roboto;
@@ -8,6 +8,28 @@ body{
     color: aliceblue;
     background: #E47369;
     background: linear-gradient(to right,rgba(228, 115, 105, 1) 0%, rgb(204, 83, 72) 98%);
+}
+
+body.pausa-curta{
+    height: 100%;
+    margin: 0;
+    font-family: Roboto;
+    display: grid;
+    place-items: center;
+    grid-template-rows: auto 1fr auto;
+    color: aliceblue;
+    background-color: #4cafff;
+}
+
+body.pausa-longa{
+    height: 100%;
+    margin: 0;
+    font-family: Roboto;
+    display: grid;
+    place-items: center;
+    grid-template-rows: auto 1fr auto;
+    color: aliceblue;
+    background-color: #1167ad;
 }
 
 
@@ -76,7 +98,7 @@ footer{
     font-weight: bold;
 }
 
-#message p{
+#message{
     font-size: 1.5rem;
     color: #72312b;
     font-weight: 500;
@@ -84,13 +106,14 @@ footer{
 
 #comecarcontar{
     background-color:#FFF;
-	border-radius:28px;
-    width: 200px;
+	border-radius:10px;
+    width: 300px;
+    height: 80px;
 	border:1px solid #d83526;
 	display:inline-block;
 	cursor:pointer;
 	color:#d83526;
-	font-size:17px;
+	font-size:22px;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #b23e35;
@@ -122,4 +145,50 @@ footer{
 #inputtasks input:focus {
     background-color: rgba(255, 255, 255, 0.7); /* Menos transparente ao focar */
     border-color: #5e5e5e;
+}
+
+#tasksList {
+    margin-top: 1rem;
+}
+
+.task-item{
+    padding:8px 12px;
+    margin-bottom: 6px;
+    color:#fafafa;
+    background-color: #f5f5f536;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.task-item:hover{
+    background-color: #e24e4e;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.task-item {
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.delete-btn{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.task-item.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
 }
